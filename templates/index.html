@@ -3,104 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Report</title>
+    <title>Chest Cancer Prediction</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50">
     <nav class="border-b px-6 py-4">
         <div class="flex items-center justify-between">
             <div class="flex items-center space-x-8">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <!-- <img src="/api/placeholder/50/50" alt="AI Logo" class="h-12"> -->
-                     <h1 class="text-pink-500 font-bold text-3xl">AI</h1>
-                </div>
-                
-                <!-- Navigation -->
+                <h1 class="text-pink-500 font-bold text-3xl">Chest Cancer AI</h1>
                 <div class="flex space-x-6">
                     <a href="#" class="border-b-2 border-black px-1 font-medium">Home</a>
-                    <a href="#" class="text-gray-500 hover:text-black">About us</a>
-                    <a href="#" class="text-gray-500 hover:text-black">Reviews</a>
-                    <a href="#" class="text-gray-500 hover:text-black">Symptoms</a>
+                    <a href="#" class="text-gray-500 hover:text-black">About</a>
                 </div>
             </div>
-            
-
         </div>
     </nav>
 
     <main class="mx-auto max-w-4xl px-6 py-8">
-        <h1 class="mb-12 text-3xl font-bold text-gray-800">Upload Report</h1>
-        
-        <!-- Tab Navigation -->
-        <div class="mb-12 flex justify-center space-x-8 border-b">
-            <button class="border-b-2 border-black px-4 pb-4 font-medium">Mammogram</button>
-            <button class="px-4 pb-4 text-gray-400">MRI</button>
-            <button class="px-4 pb-4 text-gray-400">Ultrasound</button>
-        </div>
+        <h1 class="mb-12 text-3xl font-bold text-gray-800">Upload Report for Prediction</h1>
 
-        <!-- Upload Section -->
-        <div class="rounded-lg border-2 border-dashed border-gray-300 p-12">
-            <div class="text-center">
-                <div class="mx-auto mb-4 h-16 w-16">
-                    <svg class="h-full w-full text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
-                    </svg>
-                </div>
+        <div class="rounded-lg border-2 border-dashed border-gray-300 p-12 text-center">
+            <input type="file" id="fileInput" class="hidden" />
+            <div id="uploadSection">
+                <svg class="mx-auto h-16 w-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                </svg>
                 <h3 class="mb-2 text-xl font-medium text-gray-700">Upload Data File</h3>
-                <p class="mb-4 text-sm text-gray-500">or browse your file to upload</p>
-                <p class="mx-auto max-w-md text-xs text-gray-400">
-                    Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                </p>
-                
-                <!-- File Upload Progress -->
-                <div class="mx-auto mt-8 max-w-md">
-                    <div class="mb-2 flex items-center">
-                        <svg class="mr-2 h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 0h8v12H6V4z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-sm">Rollup.xlsm</span>
-                        <span class="ml-auto text-sm text-gray-500">5.7 MB of 7.8 MB</span>
-                    </div>
-                    <div class="h-2 w-full rounded-full bg-gray-200">
-                        <div class="h-2 w-3/4 rounded-full bg-pink-500"></div>
-                    </div>
-                    <span class="mt-1 text-xs text-gray-500">Uploading... 75%</span>
-                </div>
-
-                <button class="mt-8 rounded-full bg-pink-500 px-8 py-3 font-medium text-white hover:bg-pink-600">
-                    Upload File
+                <button class="mt-4 rounded-full bg-pink-500 px-8 py-3 font-medium text-white hover:bg-pink-600"
+                        onclick="document.getElementById('fileInput').click()">Choose File
                 </button>
             </div>
-        </div>
-
-        <!-- Social Links -->
-        <div class="fixed left-8 top-1/2 -translate-y-1/2 space-y-4">
-            <a href="#" class="block text-gray-400 hover:text-gray-600">
-                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"></path>
-                </svg>
-            </a>
-            <a href="#" class="block text-gray-400 hover:text-gray-600">
-                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.411 2.865 8.138 6.839 9.459.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.135 20 14.41 20 10c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path>
-                </svg>
-            </a>
-            <a href="#" class="block text-gray-400 hover:text-gray-600">
-                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path>
-                </svg>
-            </a>
-            <a href="#" class="block text-gray-400 hover:text-gray-600">
-                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.237 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.852 0 1.264.64 1.264 1.408 0 .858-.546 2.14-.828 3.33-.236.995.5 1.807 1.48 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.745 2.281a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.223-.335.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.525-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S15.523 0 10 0z" clip-rule="evenodd"></path>
-                </svg>
-            </a>
+            <div id="loadingSection" class="hidden">
+                <p class="text-gray-700">Processing your file...</p>
+            </div>
+            <div id="resultSection" class="hidden mt-4">
+                <h3 class="text-xl font-medium">Prediction Result</h3>
+                <p id="resultText" class="mt-2 text-gray-800"></p>
+                <button class="mt-4 rounded-full bg-gray-500 px-8 py-3 font-medium text-white hover:bg-gray-600"
+                        onclick="resetUI()">Retry</button>
+            </div>
         </div>
     </main>
 
-    <footer class="mt-12 border-t py-6 text-center text-sm text-gray-500">
-        Copyright © 2010-2024 AI. All rights reserved.
-    </footer>
+    <script>
+        document.getElementById('fileInput').addEventListener('change', async function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = async function () {
+                    const base64Image = reader.result.split(',')[1];
+                    document.getElementById('uploadSection').classList.add('hidden');
+                    document.getElementById('loadingSection').classList.remove('hidden');
+
+                    try {
+                        const response = await fetch('/predict', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ image: base64Image })
+                        });
+
+                        const result = await response.json();
+
+                        document.getElementById('loadingSection').classList.add('hidden');
+                        document.getElementById('resultSection').classList.remove('hidden');
+
+                        if (result.status === "success") {
+                            document.getElementById('resultText').innerText = `Prediction: ${result.prediction} (Confidence: ${result.confidence})`;
+                        } else {
+                            document.getElementById('resultText').innerText = `Error: ${result.message}`;
+                        }
+                    } catch (error) {
+                        document.getElementById('loadingSection').classList.add('hidden');
+                        document.getElementById('resultSection').classList.remove('hidden');
+                        document.getElementById('resultText').innerText = "An error occurred. Please try again.";
+                    }
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function resetUI() {
+            document.getElementById('resultSection').classList.add('hidden');
+            document.getElementById('uploadSection').classList.remove('hidden');
+            document.getElementById('fileInput').value = ""; // Clear file input
+        }
+    </script>
 </body>
 </html>
