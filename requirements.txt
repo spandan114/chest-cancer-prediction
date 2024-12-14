@@ -1,5 +1,6 @@
 tensorflow
 pandas 
+dotenv
 gdown
 dvc
 mlflow
@@ -14,6 +15,7 @@ ensure
 joblib
 types-PyYAML
 scipy
+dagshub
 Flask
 Flask-Cors
 -e .
